@@ -337,7 +337,7 @@ class condGANTrainer(object):
                     #print(D_logs + '\n' + G_logs)
                     iters_100_time = time.time()
                 # save images
-                if gen_iterations % 5000 == 0:
+                if gen_iterations % 500 == 0:
                     print("step : " , gen_iterations, "iters_5000_time : " , time.time() - iters_5000_time)
                     backup_para = copy_G_params(netG)
                     load_params(netG, avg_param_G)
