@@ -83,7 +83,8 @@ class GlobalAttentionGeneral(nn.Module):
     def applyMask(self, mask):
         self.mask = mask  # batch x sourceL
 
-    def forward(self, input, context):
+    #newLine def forward(self, input, context):
+    def forward(self, input, sentence, context):
         """
             input: batch x idf x ih x iw (queryL=ihxiw)
             context: batch x cdf x sourceL
