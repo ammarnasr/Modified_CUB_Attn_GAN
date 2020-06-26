@@ -1,0 +1,2 @@
+# Modified_CUB_Attn_GAN
+Modified_CUB_Attn_GAN Sentence Attention
