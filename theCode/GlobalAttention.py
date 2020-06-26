@@ -123,7 +123,8 @@ class GlobalAttentionGeneral(nn.Module):
         # --> batch x idf x queryL
         weightedContext = torch.bmm(sourceT, attn)
         weightedContext = weightedContext.view(batch_size, -1, ih, iw)
-        attn = attn.view(batch_size, -1, ih, iw)
+        #newLine attn = attn.view(batch_size, -1, ih, iw)
+        word_attn = attn.view(batch_size, -1, ih, iw)  # (batch x sourceL x ih x iw)
 
         #newLine  8 return weightedContext, attn
         sentence                = self.linear(sentence)
